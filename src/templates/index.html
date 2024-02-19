@@ -1,0 +1,16 @@
+index.html
+
+{% extends 'base.html' %}
+{% block main %}
+
+  <h2>Welcome to Student Management System</h2>
+  <p>This is the homepage of the Student Management System.</p>
+
+    <button type="button" class="button" onclick=simple_action("{{ url_for('login') }}")>Login</button>
+    <button type="button" class="button" onclick=simple_action("{{ url_for('signup') }}")>Sign Up</button>
+    <script type="text/javascript">
+        function simple_action(target) {
+            window.location = target
+        }
+    </script>
+{% endblock %}
